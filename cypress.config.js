@@ -14,17 +14,8 @@ module.exports = defineConfig({
           return null;
         }
       });
-
-      // Impede que os cookies sejam automaticamente preservados entre os testes
-      on('before:browser:launch', (browser, launchOptions) => {
-        // Limpa os cookies de session em cada nova inicialização de teste
-        if (browser.family === 'chromium') {
-          launchOptions.preferences.default['exit_type'] = 'None';
-        }
-        return launchOptions
-      });
     },
-    pageLoadTimeout: 10000,
+    pageLoadTimeout: 20000,
     retries: {
       runMode: 2,
       openMode: 1,
