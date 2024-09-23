@@ -3,7 +3,7 @@ Cypress.on('uncaught:exception', (_err, _runnable) => {
 });
 
 // Sobrescrever o comando cy.log para usar cy.task
-Cypress.Commands.overwrite('log', (subject, message) => {
+Cypress.Commands.overwrite('log', (_subject, message) => {
   return cy.task('log', message);
 });
 
@@ -14,12 +14,12 @@ Cypress.on('log:added', (options) => {
   }
 });
 
-// Garante que o ambiente esteja zerado antes de cada teste e adiciona logs para diagnóstico
+
 beforeEach(() => {
-  cy.log('Limpando cookies, armazenamento local e sessão storage'); // Adiciona log para diagnóstico
   cy.clearCookies();
   cy.clearLocalStorage();
   cy.window().then((window) => {
     window.sessionStorage.clear();
   });
+  cy.wait(2000);
 });

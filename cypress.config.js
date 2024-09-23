@@ -15,7 +15,7 @@ module.exports = defineConfig({
         }
       });
     },
-    pageLoadTimeout: 20000,
+    pageLoadTimeout: 10000,
     retries: {
       runMode: 2,
       openMode: 1,

@@ -70,9 +70,9 @@ cypress.config.js: Arquivo de configuração do Cypress.
 
 cypress/support/e2e.js: Arquivo de suporte com configurações e hooks globais.
 
-cypress/pages/SuperfretePage.js: Definição da página de ações e validações específicas para a página Superfrete.
+cypress/pages/CalcularFretePage.js: Definição da página de ações e validações específicas para a página Superfrete.
 
-cypress/e2e/teste_superfrete.cy.js: Arquivo de teste contendo os cenários de teste para validação do cálculo de frete.
+cypress/e2e/calcular_frete.cy.js: Arquivo de teste contendo os cenários de teste para validação do cálculo de frete.
 
 cypress/Data/dataFrete.js: Contém os dados de entrada e os valores esperados para as validações de teste.
 
